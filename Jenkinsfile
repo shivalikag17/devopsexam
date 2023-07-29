@@ -16,7 +16,7 @@ pipeline {
                 sh 'echo dckr_pat_upZWFBxtIVqnMkB8ye5LnrBfY1g | /usr/bin/docker login -u shivalika17 --password-stdin'
           }
         }
-        stage('Service create') {
+        stage('Service Remove')
             steps {
                 sh '/usr/bin/docker container rm exam'
              }
