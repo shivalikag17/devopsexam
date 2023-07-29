@@ -18,6 +18,12 @@ pipeline {
         }
         stage('Service create') {
             steps {
+                sh '/usr/bin/docker container rm exam'
+             }
+         }
+
+        stage('Service create') {
+            steps {
                 sh '/usr/bin/docker container run -itd --name exam -p 4000:4000  shivalika17/ditissimage'
             }
         }
