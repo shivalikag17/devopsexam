@@ -16,12 +16,6 @@ pipeline {
                 sh 'echo dckr_pat_upZWFBxtIVqnMkB8ye5LnrBfY1g | /usr/bin/docker login -u shivalika17 --password-stdin'
           }
         }
-        stage('Service Remove') {
-            steps {
-                sh '/usr/bin/docker container rm exam'
-             }
-         }
-
         stage('Service create') {
             steps {
                 sh '/usr/bin/docker container run -itd --name exam -p 4000:4000  shivalika17/ditissimage'
